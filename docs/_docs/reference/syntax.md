@@ -182,13 +182,13 @@ Type              ::=  FunType
                     |  MatchType
                     |  InfixType
 FunType           ::=  FunTypeArgs (‘=>’ | ‘?=>’) Type
-                    |  HKTypeParamClause '=>' Type
+                    |  HKTypeParamClause ‘=>’ Type
 FunTypeArgs       ::=  InfixType
                     |  ‘(’ [ FunArgTypes ] ‘)’
                     |  FunParamClause
 FunParamClause    ::=  ‘(’ TypedFunParam {‘,’ TypedFunParam } ‘)’
 TypedFunParam     ::=  id ‘:’ Type
-MatchType         ::=  InfixType `match` <<< TypeCaseClauses >>>
+MatchType         ::=  InfixType ‘match’ <<< TypeCaseClauses >>>
 InfixType         ::=  RefinedType {id [nl] RefinedType}
 RefinedType       ::=  AnnotType {[nl] Refinement}
 AnnotType         ::=  SimpleType {Annotation}
@@ -393,7 +393,7 @@ Export            ::=  ‘export’ ImportExpr {‘,’ ImportExpr}
 ImportExpr        ::=  SimpleRef {‘.’ id} ‘.’ ImportSpec
                     |  SimpleRef ‘as’ id
 ImportSpec        ::=  NamedSelector
-                    |  WildcardSelector
+                    |  WildCardSelector
                     | ‘{’ ImportSelectors) ‘}’
 NamedSelector     ::=  id [‘as’ (id | ‘_’)]
 WildCardSelector  ::=  ‘*' | ‘given’ [InfixType]
