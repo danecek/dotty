@@ -396,7 +396,7 @@ ImportSpec        ::=  NamedSelector
                     |  WildcardSelector
                     | ‘{’ ImportSelectors) ‘}’
 NamedSelector     ::=  id [‘as’ (id | ‘_’)]
-WildCardSelector  ::=  ‘*' | ‘given’ [InfixType]
+WildCardSelector  ::=  ‘*’ | ‘given’ [InfixType]
 ImportSelectors   ::=  NamedSelector [‘,’ ImportSelectors]
                     |  WildCardSelector {‘,’ WildCardSelector}
 
