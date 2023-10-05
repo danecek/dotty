@@ -378,7 +378,7 @@ Export            ::=  ‘export’ ImportExpr {‘,’ ImportExpr}
 ImportExpr        ::=  SimpleRef {‘.’ id} ‘.’ ImportSpec
                     |  SimpleRef ‘as’ id
 ImportSpec        ::=  NamedSelector
-                    |  WildcardSelector
+                    |  WildCardSelector
                     | ‘{’ ImportSelectors) ‘}’
 NamedSelector     ::=  id [‘as’ (id | ‘_’)]
 WildCardSelector  ::=  ‘*' | ‘given’ [InfixType]
