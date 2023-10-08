@@ -182,7 +182,7 @@ Type              ::=  FunType
                     |  MatchType
                     |  InfixType
 FunType           ::=  FunTypeArgs (‘=>’ | ‘?=>’) Type
-                    |  HKTypeParamClause '=>' Type
+                    |  HkTypeParamClause '=>' Type
 FunTypeArgs       ::=  InfixType
                     |  ‘(’ [ FunArgTypes ] ‘)’
                     |  FunParamClause
