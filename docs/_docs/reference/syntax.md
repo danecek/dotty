@@ -182,13 +182,13 @@ Type              ::=  FunType
                     |  MatchType
                     |  InfixType
 FunType           ::=  FunTypeArgs (‘=>’ | ‘?=>’) Type
-                    |  HKTypeParamClause '=>' Type
+                    |  HkTypeParamClause '=>' Type
 FunTypeArgs       ::=  InfixType
                     |  ‘(’ [ FunArgTypes ] ‘)’
                     |  FunParamClause
 FunParamClause    ::=  ‘(’ TypedFunParam {‘,’ TypedFunParam } ‘)’
 TypedFunParam     ::=  id ‘:’ Type
-MatchType         ::=  InfixType `match` <<< TypeCaseClauses >>>
+MatchType         ::=  InfixType ‘match’ <<< TypeCaseClauses >>>
 InfixType         ::=  RefinedType {id [nl] RefinedType}
 RefinedType       ::=  AnnotType {[nl] Refinement}
 AnnotType         ::=  SimpleType {Annotation}
